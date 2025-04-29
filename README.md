@@ -36,5 +36,5 @@ Geodesics are one of the fundamental concepts of Riemanian geometry. Simply said
 
 # Neighbourhood
 
-Riemannian geometry introduces the notion of normal neighborhood $W$ of a point. Given a fixed $\delta > 0$, for all $a, b \in W$, there exists a geodesic such that the length of the geodesic is inferior than $\delta$.
+Riemannian geometry introduces the notion of normal neighborhood $W$ of a point. Given a fixed $\delta > 0$, for all $a, b \in W$, there exists a geodesic such that the length of a joining geodesic $\gamma$ is inferior than $\delta$. However, there is no guarantee that such a $\gamma$ is entierely included in $W$. Hence we introduce the notion of *strong connexity* : that ensure that for each pair of points of a subset $S$ of $M$ there exists a unique geodesic joining those two points with an interior contained in $S$.
 
