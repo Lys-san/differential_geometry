@@ -12,7 +12,7 @@ When we talk of charts, preciseley, we are talking of a neighborhood of a point,
 
 ## Tangent Space
 
-Considering a manifold $\mathcal{M}$ of dimension $d$, we begin by chosing a point $p \in \mathcal{M}$. Now, let's consider the set of all smooth curves in $\mathcal{M}$ that passes through $p$ denoted by  $\mathcal{C}_p^\infty(\mathcal{M})$. Since each curve is paratrized, we can take the parameter derivative which produces the velocity at each point. To produce the tangeant vectors at a point, we need to take the derivative of all of the smooth curves at this point. The tangeant space $T_pM$ is a vector space of the same dimension of the manifold. 
+Considering a manifold $\mathcal{M}$ of dimension $d$, we begin by chosing a point $p \in \mathcal{M}$. Now, let's consider the set of all smooth curves in $\mathcal{M}$ that passes through $p$ denoted by  $\mathcal{C}_p^\infty(\mathcal{M})$. Since each curve is paratrized, we can take the parameter derivative which produces the velocity at each point. To produce the tangeant vectors at a point, we need to take the derivative of all of the smooth curves at this point. The tangeant space $T_pM$ is a vector space of the same dimension as the manifold. 
 
 ## Riemanian manifold
 
@@ -28,7 +28,13 @@ When we say that the manifold should be differentiable, we could equivalently sa
 
 The notion of tangent space on a point is based on the notion of tangent  vectors, representing the velocity of any curve passing through that point.
 
+## Geodesics
+
+Geodesics are one of the fundamental concepts of Riemanian geometry. Simply said, a geodesic genelalizes the notion of a straight line in the euclidian space to manifolds. For two points "sufficiently close", it is proven that a geodesic minimize arc lengths. In addition, the shortest path between two points in general is always a geodesic.
+
+
+
 # Neighbourhood
 
-Normal neighbourhood W : given a delta > 0, for all a, b in W, there exists a geodesic such that the length of the geodesic is inferior than delta.
+Riemannian geometry introduces the notion of normal neighborhood $W$ of a point. Given a fixed $\delta > 0$, for all $a, b \in W$, there exists a geodesic such that the length of the geodesic is inferior than $\delta$.
 
