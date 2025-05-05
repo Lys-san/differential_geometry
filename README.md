@@ -30,7 +30,7 @@ The notion of tangent space on a point is based on the notion of tangent  vector
 
 ## Geodesics
 
-Geodesics are one of the fundamental concepts of Riemanian geometry. Simply said, a geodesic genelalizes the notion of a straight line in the euclidian space to manifolds. For two points "sufficiently close", it is proven that a geodesic minimize arc lengths. In addition, the shortest path between two points in general is always a geodesic.
+Geodesics are one of the fundamental concepts of Riemanian geometry. Simply said, a geodesic genelalizes the notion of a straight line in the euclidian space to manifolds. For two points "sufficiently close", it is proven that a geodesic minimize arc lengths. In addition, the shortest path between two points in general is always a geodesic. The major point for a curve to be geodesic is that it should be parametrized with constant speed (in other words, the acceleration is zero).
 
 
 
