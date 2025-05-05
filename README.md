@@ -3,7 +3,7 @@
 ## Manifolds
 
 Before anything, it is important to recall the definition of a **manifold**.\
-A manifold $\mathcal{M}$ of dimension $n$ corresponds to a **topological space** all together with a **set of charts** called *atlas* and denoted by $\mathcal{A} = (\mathcal{U}, \varphi)$, that can individually be continuously be mapped into an open subspace of $\mathbb{R}^n$ (respectively, this subspace can be mapped back into the original set i.e. we have a **homeomorphism** $\varphi$ from $\mathcal{U}$ to $\mathbb{R}^n$).\
+A manifold $(\mathcal{M}, T, \mathcal{A})$ of dimension $n$ corresponds to a **topological space** all together with a **set of charts** called *atlas* and denoted by $\mathcal{A} = (\mathcal{U}, \varphi)$, that can individually be continuously be mapped into an open subspace of $\mathbb{R}^n$ (respectively, this subspace can be mapped back into the original set i.e. we have a **homeomorphism** $\varphi$ from $\mathcal{U}$ to $\mathbb{R}^n$).\
 In other words, a manifold is a topological space that locally resembles to the euclidian space in a tightened neighborhood (e.g. the Earth is a spherical surface, but may have local flattened representations).
 
 <img src="manifold.png" alt="drawing" width="300" style="display: block; margin: 0 auto"/>
@@ -36,5 +36,12 @@ Geodesics are one of the fundamental concepts of Riemanian geometry. Simply said
 
 # Neighbourhood
 
-Riemannian geometry introduces the notion of normal neighborhood $W$ of a point. Given a fixed $\delta > 0$, for all $a, b \in W$, there exists a geodesic such that the length of a joining geodesic $\gamma$ is inferior than $\delta$. However, there is no guarantee that such a $\gamma$ is entierely included in $W$. Hence we introduce the notion of *strong connexity* : that ensure that for each pair of points of a subset $S$ of $M$ there exists a unique geodesic joining those two points with an interior contained in $S$.
+Riemannian geometry introduces the notion of ***normal neighborhood*** $W$ of a point. Given a fixed $\delta > 0$, for all $a, b \in W$, there exists a (minimal) geodesic $\gamma$ joining $a$ and $b$ with length inferior than $\delta$. However, there is no guarantee that such a $\gamma$ is entierely included in $W$. Hence we introduce the notion of ***strong connexity*** : that ensure that for each pair of points of a subset $S$ of $M$ there exists a unique geodesic joining those two points with an interior contained in $S$. In [??], it is proven that for a certain radius $\beta > 0$ the totally normal ball $B(p, \beta)$ is strongly convex.
+
+**lemma** : For any $p \in M$ there exists a $c > 0$ such that any geodesic in $M$ that is tangeant to the geodesic sphere $S(p, r)$ of radius $r < c$ at point $q$ is out of the geodesic ball $B(p, r)$.
+
+<img src="lemma.png" alt="drawing" width="300" style="display: block; margin: 0 auto"/>
+
+**proposition** : For any $p \in M$ there exists a $\beta > 0$ such that the geodesic ball $B(p, \beta)$ is strongly convex.
+
 
