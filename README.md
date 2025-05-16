@@ -42,7 +42,7 @@ The main idea behing the exponential map is to parametrize a Riemannian manifold
 
 More precisely, let $v$ be a tangeant vector to $\mathcal{M}$ at $p$. Then, there exists a unique geodesic satisfying $\gamma_v(0) = p$ with $\gamma_v'(0) = v$. The corresponding exponential $\exp_p$ map is defined by $\exp_p(v) = \gamma_v(1)$. In other words, the exponential map takes a given tangent vector (living in the tangeant space $T_pM$) and runs along the corresponding geodesic for one unit time, giving us a point on the manifold $\mathcal{M}$.
 
-Denoting $D(p)$ the set of vectors of $T_pM$ such that the exponential map is defined, it is appearent that $D(p)$ is star shaped with respect to a certain $w$, in other words, that each point of $D(p)$ can be connected to $w$ with a straight line in $T_pM$.
+Denoting $D(p)$ the set of vectors of $T_pM$ such that the exponential map is defined, it is appearent that $D(p)$ is star shaped with respect to a certain $w$, in other words, that each point of $D(p)$ can be connected to $w$ with a straight line in $T_pM$. In the case of $D(p) = T_pM$ for all point in the manifold, the manifold is said to be ***geodesically complete***.
 
 [1] has a nice illustration of the notion of exponential maps on page 337.
 
@@ -52,7 +52,7 @@ Denoting $D(p)$ the set of vectors of $T_pM$ such that the exponential map is de
 
 ## Normal neighborhood
 
-Riemannian geometry introduces the notion of ***normal neighborhood*** $W$ of a point : given a fixed $\delta > 0$, for all $a, b \in W$, there exists a (minimal) geodesic $\gamma$ joining $a$ and $b$ with length inferior than $\delta$.
+Riemannian geometry introduces the notion of ***normal neighborhood*** $W$ of a point : given a fixed $\delta > 0$, for all $a, b \in W$, there exists a (minimal) geodesic $\gamma$ joining $a$ and $b$ with length inferior than $\delta$. Another definition of the normal neighborhood is that it is an open neighborhood of a point $q$ of the form $U_q = \exp_q(B(0, \epsilon))$.
 
  However, there is no guarantee that such a $\gamma$ is entierely included in $W$. Hence we introduce the notion of ***strong connexity*** : that ensure that for each pair of points of a subset $S$ of $M$ there exists a unique geodesic joining those two points with an interior contained in $S$. In [1], it is proven that for a certain radius $\beta > 0$ the totally normal ball $B(p, \beta)$ is strongly convex.
 
