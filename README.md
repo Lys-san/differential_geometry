@@ -52,17 +52,23 @@ Denoting $D(p)$ the set of vectors of $T_pM$ such that the exponential map is de
 
 ## Normal neighborhood
 
-Riemannian geometry introduces the notion of ***normal neighborhood*** $W$ of a point : given a fixed $\delta > 0$, for all $a, b \in W$, there exists a (minimal) geodesic $\gamma$ joining $a$ and $b$ with length inferior than $\delta$. Another definition is that considering a point $q \in \mathcal{M}$ and the open ball $B(0, \epsilon) \subset T_qM$, the normal neighborhood is defined as the diffeomorphic image under $\exp_q$ of B(0, \epsilon)$.
+Riemannian geometry introduces the notion of ***normal neighborhood*** $W$ of a point : given a fixed $\delta > 0$, for all $a, b \in W$, there exists a (minimal) geodesic $\gamma$ joining $a$ and $b$ with length inferior than $\delta$. Another definition is that considering a point $q \in \mathcal{M}$ and the open ball $B(0, \epsilon) \subset T_qM$, the normal neighborhood is defined as the diffeomorphic image under $\exp_q$ of $B(0, \epsilon)$.
 
- However, there is no guarantee that such a $\gamma$ is entierely included in $W$. Hence we introduce the notion of ***strong connexity*** : that ensure that for each pair of points of a subset $S$ of $M$ there exists a unique geodesic joining those two points with an interior contained in $S$. In [1], it is proven that for a certain radius $\beta > 0$ the totally normal ball $B(p, \beta)$ is strongly convex.
+> **Normal neighborhood Theorem** [2, p.339] : Every point $q$ of a Riemannian manifold $\mathcal{M}$ has a neighborhood $W$ which is the diffeomorphic image under $\exp_q$ of a star-shaped neighborhood $\~W$ of the zero vector $0_q$ of $T_qM$
 
-**lemma** : For any $p \in M$ there exists a $c > 0$ such that any geodesic in $M$ that is tangeant to any geodesic sphere $S(p, r)$ of radius $r < c$ at point $q$ is out of the geodesic ball $B(p, r)$.
+However, there is no guarantee that such a $\gamma$ is entierely included in $W$. Hence we introduce the notion of ***strong connexity*** : that ensure that for each pair of points of a subset $S$ of $M$ there exists a unique geodesic joining those two points with an interior contained in $S$. In [1], it is proven that for a certain radius $\beta > 0$ the totally normal ball $B(p, \beta)$ is strongly convex.
+
+> **lemma** : For any $p \in M$ there exists a $c > 0$ such that any geodesic in $M$ that is tangeant to any geodesic sphere $S(p, r)$ of radius $r < c$ at point $q$ is out of the geodesic ball $B(p, r)$.
+
+> *note : when we talk about the geodesic ball, we simply talk about the ball within the manifold and not the ambiant space. It is therefore formed with the geodesic distance rather than the euclidean one.*
 
 <img src="lemma.png" alt="drawing" width="300" style="display: block; margin: 0 auto"/>
 
-**proof** : 
+In other words, this means that there exists a specific "border" at distance $c$ to $p$ preventing any geodesic $\gamma$ to cross the tangent ball centered in $p$ : if $\gamma$ crosses that border, this means that $\gamma$ is necessarily out of the tangent ball.
 
-**proposition** : For any $p \in M$ there exists a $\beta > 0$ such that the geodesic ball $B(p, \beta)$ is strongly convex.
+> **proof** : Let $p$ be the point from the lemma, and let W be its totally normal neighborhood (which is, a ).
+
+> **proposition** : For any $p \in M$ there exists a $\beta > 0$ such that the geodesic ball $B(p, \beta)$ is strongly convex.
 
 
 ____
