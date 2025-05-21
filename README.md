@@ -48,7 +48,8 @@ Denoting $D(p)$ the set of vectors of $T_pM$ such that the exponential map is de
 
 
 ## Gauss lemma
-
+> **Gauss lemma** ([1] lemma 3.5, p.69) : Let $p \in \mathcal{M}$ and let $v \in T_pM$ such that $\exp_p(v)$ is defined. Let $w \in T_pM \approx T_v(T_pM)$. Then 
+> $$\langle(d\exp_p)_v(v), \langle(d\exp_p)_v(w)\rangle = \langle v, w\rangle$$
 
 ## Normal neighborhood
 
@@ -56,7 +57,7 @@ Riemannian geometry introduces the notion of ***normal neighborhood*** $W$ of a 
 
 > **Normal neighborhood Theorem** [2, p.339] : Every point $q$ of a Riemannian manifold $\mathcal{M}$ has a neighborhood $W$ which is the diffeomorphic image under $\exp_q$ of a star-shaped neighborhood $\~W$ of the zero vector $0_q$ of $T_qM$
 
-However, there is no guarantee that such a $\gamma$ is entierely included in $W$. Hence we introduce the notion of ***strong connexity*** : that ensure that for each pair of points of a subset $S$ of $M$ there exists a unique geodesic joining those two points with an interior contained in $S$. In [1], it is proven that for a certain radius $\beta > 0$ the totally normal ball $B(p, \beta)$ is strongly convex.
+This theorem ensures the existence of a normal neighbordhood for each point of a riemannian manifold. However, there is no guarantee each point in $W$ can be joined by a $\gamma$ entierely included in $W$. Hence we introduce the notion of ***strong connexity*** : that ensure that for each pair of points of a subset $S$ of $M$ there exists a unique geodesic joining those two points with an interior contained in $S$. In [1], it is proven that for a certain radius $\beta > 0$ the totally normal ball $B(p, \beta)$ is strongly convex.
 
 > **lemma** : For any $p \in M$ there exists a $c > 0$ such that any geodesic in $M$ that is tangeant to any geodesic sphere $S(p, r)$ of radius $r < c$ at point $q$ is out of the geodesic ball $B(p, r)$.
 
@@ -66,7 +67,9 @@ However, there is no guarantee that such a $\gamma$ is entierely included in $W$
 
 In other words, this means that there exists a specific "border" at distance $c$ to $p$ preventing any geodesic $\gamma$ to cross the tangent ball centered in $p$ : if $\gamma$ crosses that border, this means that $\gamma$ is necessarily out of the tangent ball.
 
-> **proof** : Let $p$ be the point from the lemma, and let W be its totally normal neighborhood (which is, a ).
+> **proof** : Let $p$ be the point from the lemma, and let W be its totally normal neighborhood. Let's suppose that all the geodesics on $W$ have velocity one, so we can restrict ourselves to the unit tangent bundle $T_1W$ which corresponds to the set of all tangent vectors of $W$ with  velocity one : 
+> $$T_1W = \{(q, v); q \in W, v \in T_pM, \lvert v\rvert = 1\}$$
+> 
 
 > **proposition** : For any $p \in M$ there exists a $\beta > 0$ such that the geodesic ball $B(p, \beta)$ is strongly convex.
 
