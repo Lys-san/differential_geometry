@@ -48,9 +48,9 @@ Denoting $D(p)$ the set of vectors of $T_pM$ such that the exponential map is de
 
 ## Gauss lemma
 
-> **Gauss lemma** ([2] lemma 7.3, p.344) : Let $p \in B$ and suppose $\exp_p$ maps the open $\epsilon$-ball of $T_pM$ diffeomorphically onto $N_p \supset B$. Then, the geodesics through $p$ are orthogonal to the geodesic spheres $S_r$ defined by $S_r = \{\exp_p X_p \; \vert \; \lVert X_p\rVert = r\}, r < \epsilon$.
+> **Gauss lemma** ([2] lemma 7.3, p.344) : Let $p \in B$ and suppose $\exp_p$ maps the open $\epsilon$-ball of $T_pM$ diffeomorphically onto $N_p \supset B$. Then, the geodesics through $p$ are orthogonal to the geodesic spheres $S_r$ defined by $S_r = \{\exp_p v \; \vert \; \lVert v\rVert = r\}, v \in T_pM, r < \epsilon$.
 
-This lemma asserts that any sufficiently small sphere $S_r$ centered in $p \in B$ is orthogonal to every geodesics that goes through $p$.
+This lemma asserts that any sufficiently small sphere of $T_pM$ under the exponential map is orthogonal to every geodesics that goes through $p$.
 
 
 > **Gauss lemma** ([1] lemma 3.5, p.69) : Let $p \in \mathcal{M}$ and let $v \in T_pM$ such that $\exp_p(v)$ is defined. Let $w \in T_pM \approx T_v(T_pM)$. Then 
@@ -60,6 +60,8 @@ This lemma asserts that any sufficiently small sphere $S_r$ centered in $p \in B
 
 Riemannian geometry introduces the notion of ***normal neighborhood*** $W$ of a point : given a fixed $\delta > 0$, for all $a, b \in W$, there exists a (minimal) geodesic $\gamma$ joining $a$ and $b$ with length inferior than $\delta$.\
 Another definition is that considering a point $q \in \mathcal{M}$ and the open ball $B(0, \epsilon) \subset T_qM$, the normal neighborhood is defined as the diffeomorphic image under $\exp_q$ of $B(0, \epsilon)$. Moreover, we call $\exp_q B(0, \epsilon) = B(q, \epsilon)$ the ***normal ball*** (or ***geosedic ball***) with center $q$ and radius $\epsilon$, that is, the ball within the manifold and not the ambiant space. It is therefore formed with the geodesic distance rather than the euclidean one.
+
+<img src="normal_neighborhood.png" alt="drawing" width="500" style="display: block; margin: 0 auto"/>
 
 > **Normal neighborhood Theorem** [2, p.339] : Every point $q$ of a Riemannian manifold $\mathcal{M}$ has a neighborhood $W$ which is the diffeomorphic image under $\exp_q$ of a star-shaped neighborhood $\~W$ of the zero vector $0_q$ of $T_qM$.
 
