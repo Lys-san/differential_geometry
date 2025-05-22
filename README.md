@@ -9,12 +9,11 @@ In other words, a manifold is a topological space that locally resembles to the 
 When we talk of charts, precisely, we are talking of a neighborhood of a point, with a certain size. The union of all of the charts form the atlas $\mathcal{A}$, and corresponds exactly to the original manifold $\mathcal{M}$. It is possible that one point may be included in two differents charts, which would mean that the intersection of two charts is non null. In that case, we can define what we call a *transition function*, or a *transition map* from the image of the intersection of the two charts with respects to $\varphi_\alpha$, to the image of this intersection wrt $\varphi_\beta$. More precisely, this transition map is defined on the composition of one chart and the inverse of the other : $\tau_{\alpha, \beta} = \varphi_\beta \circ \varphi_\alpha^{-1}$. Being a composition of two homeomorphisms, the transition map is also a homeomorphism.
 
 
-## Tangent Space
+## Tangent Space and tangent bundle
 
-Considering a manifold $\mathcal{M}$ of dimension $d$, we begin by chosing a point $p \in \mathcal{M}$. Now, let's consider the set of all smooth curves in $\mathcal{M}$ that passes through $p$ denoted by  $\mathcal{C}_p^\infty(\mathcal{M})$. Since each curve is paratrized, we can take the parameter derivative which produces the velocity at each point. To produce the tangeant vectors at a point, we need to take the derivative of all of the smooth curves at this point. The tangeant space $T_pM$ is a vector space of the same dimension as the manifold.\
-From this, we define the ***tangent bundle*** TM of a manifold, which corresponds to the sum of every tangent spaces at each point of the manifold. In fact, it appears that $TM$ is also a $C^\infty$ manifold of dimension 4, and each element of $TM$ is a couple $(x, v)$ where $x$ is a point in $\mathcal{M}$ and $v$ is a tangent vector of $\mathcal{M}$ at $x$. 
-
-
+Considering a manifold $\mathcal{M}$ of dimension $d$, we begin by chosing a point $p \in \mathcal{M}$. Now, let's consider the set of all smooth curves in $\mathcal{M}$ that passes through $p$ denoted by  $\mathcal{C}_p^\infty(\mathcal{M})$. Since each curve is paratrized, we can take the parameter derivative which produces the velocity at each point. To produce the tangeant vectors at a point, we need to take the derivative of all of the smooth curves at this point. The ***tangeant space $T_pM$*** is a vector space of the same dimension as the manifold.\
+From this, we define the ***tangent bundle TM*** of a manifold, which corresponds to the sum of every tangent spaces at each point of the manifold. In fact, it appears that $TM$ is also a $C^\infty$ manifold (of dimension 4), and each element of $TM$ is a couple $(x, v)$ where $x$ is a point in $\mathcal{M}$ and $v$ is a tangent vector of $\mathcal{M}$ at $x$.\
+The whole point of using tangent bundles in differential geometry is that it will allow us to reduce the local study of the geodesics on $\mathcal{M}$ to the study of trajectories on a vector field (the *geodesic field*) on $TM$.
 
 
 ## Riemanian manifold
@@ -48,20 +47,25 @@ Denoting $D(p)$ the set of vectors of $T_pM$ such that the exponential map is de
 
 
 ## Gauss lemma
+
+> **Gauss lemma** ([2] lemma 7.3, p.344) : Let $p \in B$ and suppose $\exp_p$ maps the open $\epsilon$-ball of $T_pM$ diffeomorphically onto $N_p \supset B$. Then, the geodesics through $p$ are orthogonal to the geodesic spheres $S_r$ defined by $S_r = \{\exp_p X_p \; \vert \; \lVert X_p\rVert = r\}, r < \epsilon$.
+
+This lemma asserts that any sufficiently small sphere $S_r$ centered in $p \in B$ is orthogonal to every geodesics that goes through $p$.
+
+
 > **Gauss lemma** ([1] lemma 3.5, p.69) : Let $p \in \mathcal{M}$ and let $v \in T_pM$ such that $\exp_p(v)$ is defined. Let $w \in T_pM \approx T_v(T_pM)$. Then 
-> $$\langle(d\exp_p)_v(v), \langle(d\exp_p)_v(w)\rangle = \langle v, w\rangle$$
+> $$\langle(d\exp_p)_v(v), (d\exp_p)_v(w)\rangle = \langle v, w\rangle$$
 
 ## Normal neighborhood
 
-Riemannian geometry introduces the notion of ***normal neighborhood*** $W$ of a point : given a fixed $\delta > 0$, for all $a, b \in W$, there exists a (minimal) geodesic $\gamma$ joining $a$ and $b$ with length inferior than $\delta$. Another definition is that considering a point $q \in \mathcal{M}$ and the open ball $B(0, \epsilon) \subset T_qM$, the normal neighborhood is defined as the diffeomorphic image under $\exp_q$ of $B(0, \epsilon)$.
+Riemannian geometry introduces the notion of ***normal neighborhood*** $W$ of a point : given a fixed $\delta > 0$, for all $a, b \in W$, there exists a (minimal) geodesic $\gamma$ joining $a$ and $b$ with length inferior than $\delta$.\
+Another definition is that considering a point $q \in \mathcal{M}$ and the open ball $B(0, \epsilon) \subset T_qM$, the normal neighborhood is defined as the diffeomorphic image under $\exp_q$ of $B(0, \epsilon)$. Moreover, we call $\exp_q B(0, \epsilon) = B(q, \epsilon)$ the ***normal ball*** (or ***geosedic ball***) with center $q$ and radius $\epsilon$, that is, the ball within the manifold and not the ambiant space. It is therefore formed with the geodesic distance rather than the euclidean one.
 
-> **Normal neighborhood Theorem** [2, p.339] : Every point $q$ of a Riemannian manifold $\mathcal{M}$ has a neighborhood $W$ which is the diffeomorphic image under $\exp_q$ of a star-shaped neighborhood $\~W$ of the zero vector $0_q$ of $T_qM$
+> **Normal neighborhood Theorem** [2, p.339] : Every point $q$ of a Riemannian manifold $\mathcal{M}$ has a neighborhood $W$ which is the diffeomorphic image under $\exp_q$ of a star-shaped neighborhood $\~W$ of the zero vector $0_q$ of $T_qM$.
 
 This theorem ensures the existence of a normal neighbordhood for each point of a riemannian manifold. However, there is no guarantee each point in $W$ can be joined by a $\gamma$ entierely included in $W$. Hence we introduce the notion of ***strong connexity*** : that ensure that for each pair of points of a subset $S$ of $M$ there exists a unique geodesic joining those two points with an interior contained in $S$. In [1], it is proven that for a certain radius $\beta > 0$ the totally normal ball $B(p, \beta)$ is strongly convex.
 
 > **lemma** : For any $p \in M$ there exists a $c > 0$ such that any geodesic in $M$ that is tangeant to any geodesic sphere $S(p, r)$ of radius $r < c$ at point $q$ is out of the geodesic ball $B(p, r)$.
-
-> *note : when we talk about the geodesic ball, we simply talk about the ball within the manifold and not the ambiant space. It is therefore formed with the geodesic distance rather than the euclidean one.*
 
 <img src="lemma.png" alt="drawing" width="300" style="display: block; margin: 0 auto"/>
 
