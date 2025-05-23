@@ -11,8 +11,11 @@ When we talk of charts, precisely, we are talking of a neighborhood of a point, 
 
 ## Tangent Space and tangent bundle
 
+The idea dehind tangent spaces is the definition of a $n$-dimensionnal vector space attached to each point of the manifold which has the same dimension.
 Considering a manifold $\mathcal{M}$ of dimension $d$, we begin by chosing a point $p \in \mathcal{M}$. Now, let's consider the set of all smooth curves in $\mathcal{M}$ that passes through $p$ denoted by  $\mathcal{C}_p^\infty(\mathcal{M})$. Since each curve is paratrized, we can take the parameter derivative which produces the velocity at each point. To produce the tangeant vectors at a point, we need to take the derivative of all of the smooth curves at this point. The ***tangeant space $T_pM$*** is a vector space of the same dimension as the manifold.\
-From this, we define the ***tangent bundle TM*** of a manifold, which corresponds to the sum of every tangent spaces at each point of the manifold. In fact, it appears that $TM$ is also a $C^\infty$ manifold (of dimension 4), and each element of $TM$ is a couple $(x, v)$ where $x$ is a point in $\mathcal{M}$ and $v$ is a tangent vector of $\mathcal{M}$ at $x$.\
+The notion of tangent spaces isn't exclusive to manifolds : in fact, tangent spaces also exists in Euclidean space, and they have the feature of begin *naturally* isomorphic between each others.
+
+From now on, we define the ***tangent bundle TM*** of a manifold, which corresponds to the sum of every tangent spaces at each point of the manifold. In fact, it appears that $TM$ is also a $C^\infty$ manifold (of dimension 4), and each element of $TM$ is a couple $(p, v)$ where $p$ is a point in $\mathcal{M}$ and $v$ is a tangent vector of $\mathcal{M}$ at $p$.\
 The whole point of using tangent bundles in differential geometry is that it will allow us to reduce the local study of the geodesics on $\mathcal{M}$ to the study of trajectories on a vector field (the *geodesic field*) on $TM$.
 
 
@@ -32,9 +35,22 @@ where $t$  is an affine function of the arc-length.
 
 ## Geodesics
 
-Geodesics are one of the fundamental concepts of Riemanian geometry. Simply said, a geodesic genelalizes the notion of a straight line in the euclidian space to manifolds, and locally yields the shortest distance between two points. In addition, the shortest path between two points in general is always a geodesic.\
-One thing to know is that a curve living on a manifold has not only one but many derivatives, as it may bend along multiple directions. Hence, we introduce the notion of ***covariant derivative***, which - simply said - shall recall the derivative of a tengeant vector $V$ *from the viewpoint of $S$*. The major point for a curve to be geodesic is that it should be parametrized with constant speed, in other words, its covariant derivative should always be equal to zero.
+Considering a Riemannian manifold $\mathcal{M}$, the concept of *length* makes sense of any piecewise smooth curve on $\mathcal{M}$. Then, we introduce one of the fundamental concepts of Riemannian geometry, known as geodesics. Simply said, a geodesic generalizes the notion of a straight line in the euclidian space to manifolds, and locally yields the shortest distance between two points. In addition, the shortest path between two points in general is always a geodesic. A nice and intuitive example is that the geodesics of a sphere corresponds to its great circles parametrized by arc length.\
+One thing to know is that a curve living on a manifold has not only one but many derivatives, as it may bend along multiple directions. Hence, we introduce the notion of ***covariant derivative***, which - simply said - shall recall the derivative of a tengeant vector $V$ *from the viewpoint of $S$*. The covariant derivative is usually denoted by $\frac{D\gamma}{dt}$. The major point for a curve to be geodesic is that it should be parametrized with constant speed, in other words, its covariant derivative should always be equal to zero. 
 
+## Flow and geodesic flow
+
+First of all, let's consider the map that associates to each point $p \in \mathcal{M}$ a tangent vector in $T_pM$
+> **Theorem** ([1], theorem 2.2, p.63) : Consider an open set $V \in \mathcal{M}$, and a point $p \in \mathcal{M}$. Then, there exists an open set $V_0 \in V$, $p \in V_0$, a number $\delta > 0$ and a $C^\infty$ mapping $\varphi: (-\delta, \delta) \times V_0 \rightarrow V$ such that the curve $t \rightarrow \varphi(t, q)$ is the unique trajectory of $v$ which at the instant $t = 0$ passes through the point $q$ for every $q \in V_0$.
+
+This theorem ensures the existence of an open subset in $\mathcal{M}$ 
+
+
+The mapping $\varphi_t : V_0 \rightarrow V$ given by $\varphi_t(q) = \varphi(t, q)$ is called the *flow* of $v$ on $V$.
+
+A flow on a manifold is a $C^\infty$ map $\theta$ from $W \subset R \times \mathcal{M}$ to $\mathcal{M}$ which satisfies the following conditions :\
+(i) $\theta_0(p) = p$ for all $p \in \mathcal{M}$\
+(ii) If $(s, p) \in W$, then 
 ## Exponential maps
 
 The main idea behind the exponential map is to parametrize a Riemannian manifold **locally** near any point thanks to geodesics, in terms of a map from $T_pM$ to the manifold.
@@ -56,10 +72,12 @@ This lemma asserts that any sufficiently small sphere of $T_pM$ under the expone
 > **Gauss lemma** ([1] lemma 3.5, p.69) : Let $p \in \mathcal{M}$ and let $v \in T_pM$ such that $\exp_p(v)$ is defined. Let $w \in T_pM \approx T_v(T_pM)$. Then 
 > $$\langle(d\exp_p)_v(v), (d\exp_p)_v(w)\rangle = \langle v, w\rangle$$
 
+????
+
 ## Normal neighborhood
 
 Riemannian geometry introduces the notion of ***normal neighborhood*** $W$ of a point : given a fixed $\delta > 0$, for all $a, b \in W$, there exists a (minimal) geodesic $\gamma$ joining $a$ and $b$ with length inferior than $\delta$.\
-Another definition is that considering a point $q \in \mathcal{M}$ and the open ball $B(0, \epsilon) \subset T_qM$, the normal neighborhood is defined as the diffeomorphic image under $\exp_q$ of $B(0, \epsilon)$. Moreover, we call $\exp_q B(0, \epsilon) = B(q, \epsilon)$ the ***normal ball*** (or ***geosedic ball***) with center $q$ and radius $\epsilon$, that is, the ball within the manifold and not the ambiant space. It is therefore formed with the geodesic distance rather than the euclidean one.
+Another definition is that considering a point $p \in \mathcal{M}$ and the open ball $B(0, \epsilon) \subset T_pM$, the normal neighborhood $W$ is defined as the diffeomorphic image under $\exp_p$ of $B(0, \epsilon)$ (see figure above). Moreover, we call $\exp_q B(0, \epsilon) = B(p, \epsilon)$ the ***normal ball*** (or ***geosedic ball***) with center $q$ and radius $\epsilon$ that lives *within* the manifold and not the ambiant space. It is therefore formed with the geodesic distance rather than the euclidean one.
 
 <img src="normal_neighborhood.png" alt="drawing" width="500" style="display: block; margin: 0 auto"/>
 
@@ -71,11 +89,11 @@ This theorem ensures the existence of a normal neighbordhood for each point of a
 
 <img src="lemma.png" alt="drawing" width="300" style="display: block; margin: 0 auto"/>
 
-In other words, this means that there exists a specific "border" at distance $c$ to $p$ preventing any geodesic $\gamma$ to cross the tangent ball centered in $p$ : if $\gamma$ crosses that border, this means that $\gamma$ is necessarily out of the tangent ball.
+In other words, this means that there exists a specific "border" at distance $c$ to $p$ preventing any geodesic $\gamma$ to cross the tangent ball centered in $p$ : if $\gamma$ crosses that border, this means that $\gamma$ admits a local minimum tangent to the ball.
 
 > **proof** : Let $p$ be the point from the lemma, and let W be its totally normal neighborhood. Let's suppose that all the geodesics on $W$ have velocity one, so we can restrict ourselves to the unit tangent bundle $T_1W$ which corresponds to the set of all tangent vectors of $W$ with  velocity one : 
 > $$T_1W = \{(q, v); q \in W, v \in T_pM, \lvert v\rvert = 1\}$$
-> 
+> Let $\gamma: I \times T_1W \rightarrow \mathcal{M}$, $I = (-\epsilon, \epsilon)
 
 > **proposition** : For any $p \in M$ there exists a $\beta > 0$ such that the geodesic ball $B(p, \beta)$ is strongly convex.
 
