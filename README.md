@@ -1,13 +1,13 @@
 ## Manifolds
 
-The paradigm of differential geometry is we should not think of shapes as always sitting inside a fixed Euclidean space, but rather as a **space of its own**. 
+The paradigm of differential geometry is that we should not think of shapes as always sitting inside a fixed Euclidean space, but rather as a **space of its own**. 
 In this perspective, we shall recall before anything the definition of a **manifold**. \
 A manifold $(\mathcal{M}, T, \mathcal{A})$ of dimension $n$ corresponds to a **topological space** all together with a **set of charts** called *atlas* and denoted by $\mathcal{A} = (\mathcal{U}, \varphi)$, that can individually be continuously be mapped into an open subspace of $\mathbb{R}^n$ (respectively, this subspace can be mapped back into the original set i.e. we have a **homeomorphism** $\varphi$ from $\mathcal{U}$ to $\mathbb{R}^n$).\
 In other words, a manifold is a topological space that locally resembles to the euclidian space in a tightened neighborhood (e.g. the Earth is a spherical surface, but may have local flattened representations). On the figure above, we present a potatoe-shaped 2D manifold with one chart depicted in green.
 
 <img src="manifold.png" alt="drawing" width="300" style="display: block; margin: 0 auto"/>
 
-When we talk of charts, precisely, we are talking of a neighborhood of a point, with a certain size. The union of all of the charts form the atlas $\mathcal{A}$, and corresponds exactly to the original manifold $\mathcal{M}$. It is possible that one point may be included in two differents charts, which would mean that the intersection of two charts is non null. In that case, we can define what we call a *transition function*, or a *transition map* from the image of the intersection of the two charts with respects to $\varphi_\alpha$, to the image of this intersection wrt $\varphi_\beta$. More precisely, this transition map is defined on the composition of one chart and the inverse of the other : $\tau_{\alpha, \beta} = \varphi_\beta \circ \varphi_\alpha^{-1}$. Being a composition of two homeomorphisms, the transition map is also a homeomorphism.
+When we talk of charts, precisely, we are talking of a neighborhood of a point, with a certain size. The union of all of the charts form the atlas $\mathcal{A}$, and corresponds exactly to the original manifold $\mathcal{M}$. It is possible that one point may be included in two differents charts, which would mean that the intersection of two charts is non null. In that case, we can define what we call a **transition function**, or a **transition map** from the image of the intersection of the two charts with respects to $\varphi_\alpha$, to the image of this intersection wrt $\varphi_\beta$. More precisely, this transition map is defined on the composition of one chart and the inverse of the other : $\tau_{\alpha, \beta} = \varphi_\beta \circ \varphi_\alpha^{-1}$. Being a composition of two homeomorphisms, the transition map is also a homeomorphism.
 
 
 ## Tangent Space and tangent bundle
@@ -111,4 +111,5 @@ ____
 
 [1] Manfredo Perdigao Do Carmo, "Riemannian Geometry" in *Mathematics: Theory & Applications*, Birkhauser 1992\
 [2] William M. Boothby, "An introduction to differentiable manifolds and riemannian geometry" in *Pure and applied Mathematics*, Nachdr, 1993\
-[3] University of Pennsylvania course on Differential Geometry by Jean Gallier, chapter 8, 13 https://www.cis.upenn.edu/~cis6100/cis6100-notes-23.html
+[3] University of Pennsylvania course on Differential Geometry by Jean Gallier, chapter 8, 13 https://www.cis.upenn.edu/~cis6100/cis6100-notes-23.html\
+[4] WHYB maths youtube channel, "Manifold and Differential Geometry" videos serie
