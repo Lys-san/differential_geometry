@@ -40,13 +40,17 @@ One thing to know is that a curve living on a manifold has not only one but many
 
 ## Flow and geodesic flow
 
-First of all, let's consider the map that associates to each point $p \in \mathcal{M}$ a tangent vector in $T_pM$
-> **Theorem** ([1], theorem 2.2, p.63) : Consider an open set $V \in \mathcal{M}$, and a point $p \in \mathcal{M}$. Then, there exists an open set $V_0 \in V$, $p \in V_0$, a number $\delta > 0$ and a $C^\infty$ mapping $\varphi: (-\delta, \delta) \times V_0 \rightarrow V$ such that the curve $t \rightarrow \varphi(t, q)$ is the unique trajectory of $v$ which at the instant $t = 0$ passes through the point $q$ for every $q \in V_0$.
+
+> **Theorem** ([1], theorem 2.2, p.63) : Let $X$ be a vector field on an open set $V \in \mathcal{M}$. Then, there exists an open set $V_0 \subset V$, $p \in V_0$, a number $\delta > 0$ and a $C^\infty$ mapping $\varphi: (-\delta, \delta) \times V_0 \rightarrow V$ such that the curve $t \rightarrow \varphi(t, q)$ is the unique trajectory of $v$ which at the instant $t = 0$ passes through the point $q$ for every $q \in V_0$. The mapping $\varphi_t : V_0 \rightarrow V$ given by $\varphi_t(q) = \varphi(t, q)$ is called the ***flow*** of $X$ on $V$.
+
+Simply said, the flow of a vector field $X$ defined in some open set $V \subset \mathcal{M}$ is a map that takes a certain $t$ from a time interval $(-\delta, \delta)$ and a point $p$ from some subset of $\mathcal{M}$, and travels along $\mathcal{M}$ for a $t$ unit of time following a unique trajectory.
 
 This theorem ensures the existence of an open subset in $\mathcal{M}$ 
 
 
-The mapping $\varphi_t : V_0 \rightarrow V$ given by $\varphi_t(q) = \varphi(t, q)$ is called the *flow* of $v$ on $V$.
+
+
+> Lemma ([1], lemma 2.3, p.63) : There exists a unique vector field $G$ on $TM$ whose trajectories are of the form $t \rightarrow (\gamma(t), \gamma'(t))$ where $\gamma$ is a geodesic on $\mathcal{M}$. $G$ is called the geodesic field on $TM$ and its flow is called the geodesic flow.
 
 A flow on a manifold is a $C^\infty$ map $\theta$ from $W \subset R \times \mathcal{M}$ to $\mathcal{M}$ which satisfies the following conditions :\
 (i) $\theta_0(p) = p$ for all $p \in \mathcal{M}$\
@@ -89,11 +93,14 @@ This theorem ensures the existence of a normal neighbordhood for each point of a
 
 <img src="lemma.png" alt="drawing" width="300" style="display: block; margin: 0 auto"/>
 
-In other words, this means that there exists a specific "border" at distance $c$ to $p$ preventing any geodesic $\gamma$ to cross the tangent ball centered in $p$ : if $\gamma$ crosses that border, this means that $\gamma$ admits a local minimum tangent to the ball.
+In other words, this means that there exists a specific "border" such that if any geodesic $\gamma$ crosses that border, this means that the tangent point $q$ of $\gamma$ to $B(p, r)$ if the closest to $p$.
 
-> **proof** : Let $p$ be the point from the lemma, and let W be its totally normal neighborhood. Let's suppose that all the geodesics on $W$ have velocity one, so we can restrict ourselves to the unit tangent bundle $T_1W$ which corresponds to the set of all tangent vectors of $W$ with  velocity one : 
+> **proof** : Let $p$ be the point from the lemma, and let W be its totally normal neighborhood. Let's suppose that all the geodesics on $W$ have velocity one, so we can restrict ourselves to the unit tangent bundle $T_1W$ which corresponds to the set of **all tangent vectors of $W$ with  velocity one** : 
 > $$T_1W = \{(q, v); q \in W, v \in T_pM, \lvert v\rvert = 1\}$$
-> Let $\gamma: I \times T_1W \rightarrow \mathcal{M}$, $I = (-\epsilon, \epsilon)
+> Let $\gamma: I \times T_1W \rightarrow \mathcal{M}$ with $I = (-\epsilon, \epsilon)$ be the differentiable mapping such that $t \rightarrow \gamma(t, q, v)$ is the geodesic that at the instant $t = 0$ passes through $q$ with velocity $v$, $\lvert v \rvert = 1$. In other words, $\gamma$ maps back the vectors of $T_1W$ that starts at $q$ to $\mathcal{M}$.
+Define $u(t, q, v) = \exp_p^{-1}(\gamma(t, q, v))$ and 
+$$F : I \times T_1W \rightarrow R, \; F(t, q, v) = \lvert u(t, q, v)\rvert^2$$
+$F$ measures the square of the "distance" from $p$ to a point that is moving along the geodesic $\gamma$.
 
 > **proposition** : For any $p \in M$ there exists a $\beta > 0$ such that the geodesic ball $B(p, \beta)$ is strongly convex.
 
@@ -103,4 +110,5 @@ ____
 ## References
 
 [1] Manfredo Perdigao Do Carmo, "Riemannian Geometry" in *Mathematics: Theory & Applications*, Birkhauser 1992\
-[2] William M. Boothby, "An introduction to differentiable manifolds and riemannian geometry" in *Pure and applied Mathematics*, Nachdr, 1993
+[2] William M. Boothby, "An introduction to differentiable manifolds and riemannian geometry" in *Pure and applied Mathematics*, Nachdr, 1993\
+[3] University of Pennsylvania course on Differential Geometry, chapter 13 : Geodesics on Riemannian Manifolds
