@@ -1,6 +1,7 @@
 ## Manifolds
 
-Before anything, it is important to recall the definition of a **manifold**, which may be the most fundamental concept of differential geometry.\
+The paradigm of differential geometry is we should not think of shapes as always sitting inside a fixed Euclidean space, but rather as a **space of its own**. 
+In this perspective, we shall recall before anything the definition of a **manifold**. \
 A manifold $(\mathcal{M}, T, \mathcal{A})$ of dimension $n$ corresponds to a **topological space** all together with a **set of charts** called *atlas* and denoted by $\mathcal{A} = (\mathcal{U}, \varphi)$, that can individually be continuously be mapped into an open subspace of $\mathbb{R}^n$ (respectively, this subspace can be mapped back into the original set i.e. we have a **homeomorphism** $\varphi$ from $\mathcal{U}$ to $\mathbb{R}^n$).\
 In other words, a manifold is a topological space that locally resembles to the euclidian space in a tightened neighborhood (e.g. the Earth is a spherical surface, but may have local flattened representations). On the figure above, we present a potatoe-shaped 2D manifold with one chart depicted in green.
 
@@ -40,21 +41,20 @@ One thing to know is that a curve living on a manifold has not only one but many
 
 ## Flow and geodesic flow
 
+The notion of flow lies on a the preleiminary notion of *trajectory* (or *integral curve*) defined as follows :
 
-> **Theorem** ([1], theorem 2.2, p.63) : Let $X$ be a vector field on an open set $V \in \mathcal{M}$. Then, there exists an open set $V_0 \subset V$, $p \in V_0$, a number $\delta > 0$ and a $C^\infty$ mapping $\varphi: (-\delta, \delta) \times V_0 \rightarrow V$ such that the curve $t \rightarrow \varphi(t, q)$ is the unique trajectory of $v$ which at the instant $t = 0$ passes through the point $q$ for every $q \in V_0$. The mapping $\varphi_t : V_0 \rightarrow V$ given by $\varphi_t(q) = \varphi(t, q)$ is called the ***flow*** of $X$ on $V$.
+> **Definition** ([3], definition 8.6, p.504) : Let $X$ be a vector field on $\mathcal{M}$, and let $p \in \mathcal{M}$. Set $\delta > 0$. A trajectory (or integral curvature) for $X$ with initial condition $p$ is a curve $\gamma: I \rightarrow \mathcal{M}$ so that 
+> $$ \forall t \in (-\delta, \delta), \gamma'(t) = X_{\gamma(t)}  \text{, and } \gamma(0) = p$$
+
+With this definition, we know that first of all, a trajectory for $X$ with initial condition $p$ is a curve $\gamma$ that passes through $p$ at time $t = 0$, and that for every $q \in \gamma$ the tangent vector to this curve at $q$ coincides with the value of the vector field $X$ at $p$. 
+
+> **Theorem** ([1], theorem 2.2, p.63) : Let $X$ be a vector field on $\mathcal{M}$. Then, there exists an open set $V \subset \mathcal{M}$ containing a point $p$, a number $\delta > 0$ and a $C^\infty$ mapping $\varphi: (-\delta, \delta) \times V_0 \rightarrow \mathcal{M}$ such that for every $q \in V$ the curve the curve $t \rightarrow \varphi(t, q)$ is the unique trajectory of $X$ with initial condition $q$. The map $\varphi$ is called a local flow for $X$ at $p$.
 
 Simply said, the flow of a vector field $X$ defined in some open set $V \subset \mathcal{M}$ is a map that takes a certain $t$ from a time interval $(-\delta, \delta)$ and a point $p$ from some subset of $\mathcal{M}$, and travels along $\mathcal{M}$ for a $t$ unit of time following a unique trajectory.
-
-This theorem ensures the existence of an open subset in $\mathcal{M}$ 
-
-
 
 
 > Lemma ([1], lemma 2.3, p.63) : There exists a unique vector field $G$ on $TM$ whose trajectories are of the form $t \rightarrow (\gamma(t), \gamma'(t))$ where $\gamma$ is a geodesic on $\mathcal{M}$. $G$ is called the geodesic field on $TM$ and its flow is called the geodesic flow.
 
-A flow on a manifold is a $C^\infty$ map $\theta$ from $W \subset R \times \mathcal{M}$ to $\mathcal{M}$ which satisfies the following conditions :\
-(i) $\theta_0(p) = p$ for all $p \in \mathcal{M}$\
-(ii) If $(s, p) \in W$, then 
 ## Exponential maps
 
 The main idea behind the exponential map is to parametrize a Riemannian manifold **locally** near any point thanks to geodesics, in terms of a map from $T_pM$ to the manifold.
@@ -111,4 +111,4 @@ ____
 
 [1] Manfredo Perdigao Do Carmo, "Riemannian Geometry" in *Mathematics: Theory & Applications*, Birkhauser 1992\
 [2] William M. Boothby, "An introduction to differentiable manifolds and riemannian geometry" in *Pure and applied Mathematics*, Nachdr, 1993\
-[3] University of Pennsylvania course on Differential Geometry, chapter 13 : Geodesics on Riemannian Manifolds
+[3] University of Pennsylvania course on Differential Geometry by Jean Gallier, chapter 8, 13 https://www.cis.upenn.edu/~cis6100/cis6100-notes-23.html
