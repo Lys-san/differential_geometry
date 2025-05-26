@@ -50,7 +50,7 @@ With this definition, we know that first of all, a trajectory for $X$ with initi
 
 > **Theorem** ([1], theorem 2.2, p.63) : Let $X$ be a vector field on $\mathcal{M}$. Then, there exists an open set $V \subset \mathcal{M}$ containing a point $p$, a number $\delta > 0$ and a $C^\infty$ mapping $\varphi: (-\delta, \delta) \times V_0 \rightarrow \mathcal{M}$ such that for every $q \in V$ the curve the curve $t \rightarrow \varphi(t, q)$ is the unique trajectory of $X$ with initial condition $q$. The map $\varphi$ is called a local flow for $X$ at $p$.
 
-Simply said, the flow of a vector field $X$ defined in some open set $V \subset \mathcal{M}$ is a map that takes a certain $t$ from a time interval $(-\delta, \delta)$ and a point $p$ from some subset of $\mathcal{M}$, and travels along $\mathcal{M}$ for a $t$ unit of time following a unique trajectory.
+Simply said, the flow of a vector field $X$ defined in some open set $V \subset \mathcal{M}$ is a family of trajectories for all point of $V$. such that every curve have the same domain independently of the initial condition.
 
 
 > Lemma ([1], lemma 2.3, p.63) : There exists a unique vector field $G$ on $TM$ whose trajectories are of the form $t \rightarrow (\gamma(t), \gamma'(t))$ where $\gamma$ is a geodesic on $\mathcal{M}$. $G$ is called the geodesic field on $TM$ and its flow is called the geodesic flow.
