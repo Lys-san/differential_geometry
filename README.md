@@ -13,10 +13,10 @@ When we talk of charts, more precisely, we are talking of a neighborhood of a po
 It is to note that one point may be included in two differents charts, which would mean that the intersection of two charts is non null. In that case, we can define what we call a **transition function**, or a **transition map** from the image of the intersection of the two charts with respects to $\varphi_\alpha$, to the image of this intersection wrt $\varphi_\beta$. This transition map is defined on the composition of one chart and the inverse of the other : $\tau_{\alpha, \beta} = \varphi_\beta \circ \varphi_\alpha^{-1}$. Being a composition of two homeomorphisms, the transition map is also a homeomorphism.
 
 
-## Tangent Space and tangent bundle
+## Tangent vectors, Tangent Space and Tangent Bundle
 
 The idea behind tangent spaces is the definition of a $n$-dimensionnal vector space attached to each point of the manifold, which has the same dimension.\
-Considering a manifold $\mathcal{M}$ of dimension $d$, we begin by chosing a point $p \in \mathcal{M}$. Now, let's consider the set of all smooth curves in $\mathcal{M}$ that passes through $p$ denoted by  $\mathcal{C}_p^\infty(\mathcal{M})$. Since each curve is paratrized, we can take the parameter derivative which produces the velocity at each point. To produce the tangeant vectors at a point, we need to take the derivative of all of the smooth curves at this point. Each of those tangent vectors live in a unique ***tangeant space $T_pM$***, that is a vector space of the same dimension as the manifold.\
+Considering a manifold $\mathcal{M}$ of dimension $d$, we begin by chosing a point $p \in \mathcal{M}$. Now, let's consider the set of all smooth curves in $\mathcal{M}$ that passes through $p$ denoted by  $\mathcal{C}_p^\infty(\mathcal{M})$. Since each curve is paratrized, we can take the parameter derivative which produces the velocity at each point. To produce the tangeant vectors at a point, we need to take the derivative of all of the smooth curves at this point. The set of all those tangent vectors form a unique vector space of the same dimension of the manifold, called ***tangeant space $T_pM$***\
 The notion of tangent spaces isn't exclusive to manifolds : in fact, tangent spaces also exists in Euclidean space, and they have the feature of begin *naturally* isomorphic between each others.
 
 From now on, we define the ***tangent bundle TM*** of a manifold, which corresponds to the sum of every tangent spaces at each point of the manifold. In fact, it appears that $TM$ is also a $C^\infty$ manifold (of dimension 4), and each element of $TM$ is a couple $(p, v)$ where $p$ is a point in $\mathcal{M}$ and $v$ is a tangent vector of $\mathcal{M}$ at $p$.\
@@ -111,9 +111,14 @@ $F$ measures the square of the "distance" from $p$ to a point that is moving alo
 
 ____
 
+### Note
+
+It is to note that I started with zero knowledge on differential geometry, only a distant and misty calculus background. Everything I learned comes from the references cited below. I started with Do Carmo's book that is an absoute reference for quite every other reference you could find on the topic (I couldn't tell how many stackExchange pages I found related to it). However, I found it very hard to digest as a first book. If you ever wanna start learning differential and riemannian geometry by yourself, I would recommend you to start with WHYB maths videos on the topic [4], which I found to be a real golden nugget. Then, I would highly recommend to have a look at Jean Gallier's course [3] slide notes : they are so well written, very complete with a lot of examples. Those two reference are a good start before diving into more "*pure maths*" books like Boothby's [2] or Do Carmo's [1].
+
 ## References
 
 [1] Manfredo Perdigao Do Carmo, "Riemannian Geometry" in *Mathematics: Theory & Applications*, Birkhauser 1992\
 [2] William M. Boothby, "An introduction to differentiable manifolds and riemannian geometry" in *Pure and applied Mathematics*, Nachdr, 1993\
 [3] Jean Gallier, course on Differential Geometry, University of Pennsylvania, chapter 8, 13 https://www.cis.upenn.edu/~cis6100/cis6100-notes-23.html\
-[4] WHYB maths youtube channel, "Manifold and Differential Geometry" videos serie
+[4] WHYB maths youtube channel, "Manifolds" videos serie https://www.youtube.com/watch?v=RW5lJiKZHd8&list=PLxBAVPVHJPcrNrcEBKbqC_ykiVqfxZgNl
+
