@@ -1,19 +1,22 @@
 ## Manifolds
 
 The paradigm of differential geometry is that we should not think of shapes as always sitting inside a fixed Euclidean space, but rather as a **space of its own**. 
-In this perspective, we shall recall before anything the definition of a **manifold**. \
+In this perspective, we shall recall before anything the definition of a **manifold**, the objecs that we are going to work on during the differential geometry journey. \
 A manifold $(\mathcal{M}, T, \mathcal{A})$ of dimension $n$ corresponds to a **topological space** all together with a **set of charts** called *atlas* and denoted by $\mathcal{A} = (\mathcal{U}, \varphi)$, that can individually be continuously be mapped into an open subspace of $\mathbb{R}^n$ (respectively, this subspace can be mapped back into the original set i.e. we have a **homeomorphism** $\varphi$ from $\mathcal{U}$ to $\mathbb{R}^n$).\
-In other words, a manifold is a topological space that locally resembles to the euclidian space in a tightened neighborhood (e.g. the Earth is a spherical surface, but may have local flattened representations). On the figure above, we present a potatoe-shaped 2D manifold with one chart depicted in green.
+In other words, a manifold is a topological space that locally resembles to some standard model (e.g. some open subset of the euclidian space) in a tightened neighborhood. To make this idea more intuitive, we can take the Earth for example : the Earth is a spherical surface, but may have local flattened representations : in this point of view, if can be considered as a manifold. On the contrary, any shape that crosses itself (for example the nodal cubic $y^2 = x^2 - x^3$) would contain points that cannot be mapped into any euclidean space in a smooth way, and thus would not be a manifold.
+
+On the figure above, we present a potatoe-shaped 2D manifold with one chart depicted in green.
 
 <img src="manifold.png" alt="drawing" width="300" style="display: block; margin: 0 auto"/>
 
-When we talk of charts, precisely, we are talking of a neighborhood of a point, with a certain size. The union of all of the charts form the atlas $\mathcal{A}$, and corresponds exactly to the original manifold $\mathcal{M}$. It is possible that one point may be included in two differents charts, which would mean that the intersection of two charts is non null. In that case, we can define what we call a **transition function**, or a **transition map** from the image of the intersection of the two charts with respects to $\varphi_\alpha$, to the image of this intersection wrt $\varphi_\beta$. More precisely, this transition map is defined on the composition of one chart and the inverse of the other : $\tau_{\alpha, \beta} = \varphi_\beta \circ \varphi_\alpha^{-1}$. Being a composition of two homeomorphisms, the transition map is also a homeomorphism.
+When we talk of charts, more precisely, we are talking of a neighborhood of a point, with a certain size. The union of all of the charts form the atlas $\mathcal{A}$, and corresponds exactly to the original manifold $\mathcal{M}$. \
+It is to note that one point may be included in two differents charts, which would mean that the intersection of two charts is non null. In that case, we can define what we call a **transition function**, or a **transition map** from the image of the intersection of the two charts with respects to $\varphi_\alpha$, to the image of this intersection wrt $\varphi_\beta$. This transition map is defined on the composition of one chart and the inverse of the other : $\tau_{\alpha, \beta} = \varphi_\beta \circ \varphi_\alpha^{-1}$. Being a composition of two homeomorphisms, the transition map is also a homeomorphism.
 
 
 ## Tangent Space and tangent bundle
 
-The idea dehind tangent spaces is the definition of a $n$-dimensionnal vector space attached to each point of the manifold which has the same dimension.
-Considering a manifold $\mathcal{M}$ of dimension $d$, we begin by chosing a point $p \in \mathcal{M}$. Now, let's consider the set of all smooth curves in $\mathcal{M}$ that passes through $p$ denoted by  $\mathcal{C}_p^\infty(\mathcal{M})$. Since each curve is paratrized, we can take the parameter derivative which produces the velocity at each point. To produce the tangeant vectors at a point, we need to take the derivative of all of the smooth curves at this point. The ***tangeant space $T_pM$*** is a vector space of the same dimension as the manifold.\
+The idea behind tangent spaces is the definition of a $n$-dimensionnal vector space attached to each point of the manifold, which has the same dimension.\
+Considering a manifold $\mathcal{M}$ of dimension $d$, we begin by chosing a point $p \in \mathcal{M}$. Now, let's consider the set of all smooth curves in $\mathcal{M}$ that passes through $p$ denoted by  $\mathcal{C}_p^\infty(\mathcal{M})$. Since each curve is paratrized, we can take the parameter derivative which produces the velocity at each point. To produce the tangeant vectors at a point, we need to take the derivative of all of the smooth curves at this point. Each of those tangent vectors live in a unique ***tangeant space $T_pM$***, that is a vector space of the same dimension as the manifold.\
 The notion of tangent spaces isn't exclusive to manifolds : in fact, tangent spaces also exists in Euclidean space, and they have the feature of begin *naturally* isomorphic between each others.
 
 From now on, we define the ***tangent bundle TM*** of a manifold, which corresponds to the sum of every tangent spaces at each point of the manifold. In fact, it appears that $TM$ is also a $C^\infty$ manifold (of dimension 4), and each element of $TM$ is a couple $(p, v)$ where $p$ is a point in $\mathcal{M}$ and $v$ is a tangent vector of $\mathcal{M}$ at $p$.\
@@ -28,7 +31,7 @@ A Riemannian metric (p 38) on a manifold associates to each point of M an inner 
 
 <img src="riemannian_metric.png" alt="drawing" width="300" style="display: block; margin: 0 auto"/>
 
-The whole point of using Riemannian manifolds is that as the tangeant space at each point is a Euclidean space with a defined inner product, this opens the way to a the study of manifolds from a geometric point of view, allowing us us to define a lot of notions like distance, length, angles and curvature. The notion of angle between two curves for example, can be defined as the angle between their tangent vectors at their intersection point. We can also define the notion of length of a curve based on the integral of the inner product of its tangent vectors at each point [2] : 
+The whole point of using Riemannian manifolds is that as the tangeant space at each point is a Euclidean space with a defined inner product, this opens the way to a the study of manifolds from a geometric point of view using those tangent spaces, allowing us us to define a lot of notions like distance, length, angles and curvature. The notion of angle between two curves for example, can be defined as the angle between their tangent vectors at their intersection point. We can also define the notion of length of a curve based on the integral of the inner product of its tangent vectors at each point [2] : 
 $$\mathcal{L} = \int_a^b\sqrt{\Phi(\frac{dp}{dt}, \frac{dp}{dt})}dt$$
 
 where $t$  is an affine function of the arc-length.
