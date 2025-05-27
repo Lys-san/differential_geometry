@@ -119,6 +119,6 @@ It is to note that I started with zero knowledge on differential geometry, only 
 
 [1] Manfredo Perdigao Do Carmo, "Riemannian Geometry" in *Mathematics: Theory & Applications*, Birkhauser 1992\
 [2] William M. Boothby, "An introduction to differentiable manifolds and riemannian geometry" in *Pure and applied Mathematics*, Nachdr, 1993\
-[3] Jean Gallier, course on Differential Geometry, University of Pennsylvania, chapter 8, 13 https://www.cis.upenn.edu/~cis6100/cis6100-notes-23.html\
+[3] Jean Gallier, course on Differential Geometry, University of Pennsylvania, chapter 8, 13 https://www.cis.upenn.edu/~cis6100/cis6100-notes-23.html \
 [4] WHYB maths youtube channel, "Manifolds" videos serie https://www.youtube.com/watch?v=RW5lJiKZHd8&list=PLxBAVPVHJPcrNrcEBKbqC_ykiVqfxZgNl
 
