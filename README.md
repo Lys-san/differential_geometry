@@ -1,4 +1,10 @@
-## Manifolds
+### Preliminary note
+
+It is to note that I started with zero knowledge on differential geometry, only a distant and misty calculus background. Everything I learned comes from the references cited below. I started with Do Carmo's book that is an absoute reference for quite every other reference you could find on the topic (I couldn't tell how many stackExchange pages I found related to it). However, I found it very hard to digest as a first book. If you ever wanna start learning differential and riemannian geometry by yourself, I would recommend you to start with WHYB maths videos on the topic [4], which I found to be a real golden nugget. It really helped me having an intuition of what are manifolds without actually abstracting the formal definition part. Then, I would highly recommend to have a look at Jean Gallier's course [3] slide notes : they are so well written, very complete with a lot of examples. The course is divided into many subsections which makes it very easy to skim through and pick anything you need. Those two reference are a good start before diving into more "*pure maths*" books like Boothby's [2] or Do Carmo's [1], and will likely make their reading easier.
+
+___
+
+# Manifolds
 
 The paradigm of differential geometry is that we should not think of shapes as always sitting inside a fixed Euclidean space, but rather as a **space of its own**. 
 In this perspective, we shall recall before anything the definition of a **manifold**, the objecs that we are going to work on during the differential geometry journey. \
@@ -13,7 +19,7 @@ When we talk of charts, more precisely, we are talking of a neighborhood of a po
 It is to note that one point may be included in two differents charts, which would mean that the intersection of two charts is non null. In that case, we can define what we call a **transition function**, or a **transition map** from the image of the intersection of the two charts with respects to $\varphi_\alpha$, to the image of this intersection wrt $\varphi_\beta$. This transition map is defined on the composition of one chart and the inverse of the other : $\tau_{\alpha, \beta} = \varphi_\beta \circ \varphi_\alpha^{-1}$. Being a composition of two homeomorphisms, the transition map is also a homeomorphism.
 
 
-## Tangent vectors, Tangent Space and Tangent Bundle
+# Tangent vectors, Tangent Space and Tangent Bundle
 
 The idea behind tangent spaces is the definition of a $n$-dimensionnal vector space attached to each point of the manifold, which has the same dimension.\
 Considering a manifold $\mathcal{M}$ of dimension $d$, we begin by chosing a point $p \in \mathcal{M}$. Now, let's consider the set of all smooth curves in $\mathcal{M}$ that passes through $p$ denoted by  $\mathcal{C}_p^\infty(\mathcal{M})$. Since each curve is paratrized, we can take the parameter derivative which produces the velocity at each point. To produce the tangeant vectors at a point, we need to take the derivative of all of the smooth curves at this point. The set of all those tangent vectors form a unique vector space of the same dimension of the manifold, called ***tangeant space $T_pM$***\
@@ -23,7 +29,7 @@ From now on, we define the ***tangent bundle TM*** of a manifold, which correspo
 The whole point of using tangent bundles in differential geometry is that it will allow us to reduce the local study of the geodesics on $\mathcal{M}$ to the study of trajectories on a vector field (the *geodesic field*) on $TM$.
 
 
-## Riemanian manifold
+# Riemanian manifold
 
 
 A Riemanian manifold is a differentiable manifold together with a given Riemanian metric. 
@@ -37,12 +43,12 @@ $$\mathcal{L} = \int_a^b\sqrt{\Phi(\frac{dp}{dt}, \frac{dp}{dt})}dt$$
 where $t$  is an affine function of the arc-length.
 
 
-## Geodesics
+# Geodesics
 
 Considering a Riemannian manifold $\mathcal{M}$, the concept of *length* makes sense of any piecewise smooth curve on $\mathcal{M}$. Then, we introduce one of the fundamental concepts of Riemannian geometry, known as geodesics. Simply said, a geodesic generalizes the notion of a straight line in the euclidian space to manifolds, and locally yields the shortest distance between two points. In addition, the shortest path between two points in general is always a geodesic. A nice and intuitive example is that the geodesics of a sphere corresponds to its great circles parametrized by arc length.\
 One thing to know is that a curve living on a manifold has not only one but many derivatives, as it may bend along multiple directions. Hence, we introduce the notion of ***covariant derivative***, which - simply said - shall recall the derivative of a tengeant vector $V$ *from the viewpoint of $S$*. The covariant derivative is usually denoted by $\frac{D\gamma}{dt}$. The major point for a curve to be geodesic is that it should be parametrized with constant speed, in other words, its covariant derivative should always be equal to zero. 
 
-## Flow and geodesic flow
+# Flow and geodesic flow
 
 The notion of flow lies on a the preleiminary notion of *trajectory* (or *integral curve*) defined as follows :
 
@@ -59,7 +65,7 @@ Intuitively, we can think of the flow as a fluid coing through $\mathcal{M}$, an
 
 > **Lemma** ([1], lemma 2.3, p.63) : There exists a unique vector field $G$ on $TM$ whose trajectories are of the form $t \rightarrow (\gamma(t), \gamma'(t))$ where $\gamma$ is a geodesic on $\mathcal{M}$. $G$ is called the geodesic field on $TM$ and its flow is called the geodesic flow.
 
-## Exponential maps
+# Exponential maps
 
 The main idea behind the exponential map is to parametrize a Riemannian manifold **locally** near any point thanks to geodesics, in terms of a map from $T_pM$ to the manifold.
 
@@ -67,10 +73,10 @@ More precisely, let $v$ be a tangeant vector to $\mathcal{M}$ at $p$. Then, ther
 
 Denoting $D(p)$ the set of vectors of $T_pM$ such that the exponential map is defined, it is appearent that $D(p)$ is star shaped with respect to a certain $w$, in other words, that each point of $D(p)$ can be connected to $w$ with a straight line in $T_pM$. In the case where $D(p) = T_pM$ for all point in the manifold, the manifold is said to be ***geodesically complete***.
 
-[1] has a nice illustration of the notion of exponential maps on page 337.
+[2] has a nice illustration of the notion of exponential maps on page 337.
 
 
-## Gauss lemma
+# Gauss lemma
 
 > **Gauss lemma** ([2] lemma 7.3, p.344) : Let $p \in B$ and suppose $\exp_p$ maps the open $\epsilon$-ball of $T_pM$ diffeomorphically onto $N_p \supset B$. Then, the geodesics through $p$ are orthogonal to the geodesic spheres $S_r$ defined by $S_r = \{\exp_p v \; \vert \; \lVert v\rVert = r\}, v \in T_pM, r < \epsilon$.
 
@@ -82,7 +88,7 @@ This lemma asserts that any sufficiently small sphere of $T_pM$ under the expone
 
 ????
 
-## Normal neighborhood
+# Normal neighborhood
 
 Riemannian geometry introduces the notion of ***normal neighborhood*** $W$ of a point : given a fixed $\delta > 0$, for all $a, b \in W$, there exists a (minimal) geodesic $\gamma$ joining $a$ and $b$ with length inferior than $\delta$.\
 Another definition is that considering a point $p \in \mathcal{M}$ and the open ball $B(0, \epsilon) \subset T_pM$, the normal neighborhood $W$ is defined as the diffeomorphic image under $\exp_p$ of $B(0, \epsilon)$ (see figure above). Moreover, we call $\exp_q B(0, \epsilon) = B(p, \epsilon)$ the ***normal ball*** (or ***geosedic ball***) with center $q$ and radius $\epsilon$ that lives *within* the manifold and not the ambiant space. It is therefore formed with the geodesic distance rather than the euclidean one.
@@ -103,19 +109,17 @@ In other words, this means that there exists a specific "border" such that if an
 > $$T_1W = \{(q, v); q \in W, v \in T_pM, \lvert v\rvert = 1\}$$
 > Let $\gamma: I \times T_1W \rightarrow \mathcal{M}$ with $I = (-\epsilon, \epsilon)$ be the differentiable mapping such that $t \rightarrow \gamma(t, q, v)$ is the geodesic that at the instant $t = 0$ passes through $q$ with velocity $v$, $\lvert v \rvert = 1$. In other words, $\gamma$ maps back the vectors of $T_1W$ that starts at $q$ to $\mathcal{M}$.
 Define $u(t, q, v) = \exp_p^{-1}(\gamma(t, q, v))$ and 
-$$F : I \times T_1W \rightarrow R, \; F(t, q, v) = \lvert u(t, q, v)\rvert^2$$
-$F$ measures the square of the "distance" from $p$ to a point that is moving along the geodesic $\gamma$.
+> $$F : I \times T_1W \rightarrow R, \; F(t, q, v) = \lvert u(t, q, v)\rvert^2$$
+> $F$ measures the square of the "distance" from $p$ to a point that is moving along the geodesic $\gamma$. It is clear that $u$ and $F$ are differentiable
 
 > **proposition** : For any $p \in M$ there exists a $\beta > 0$ such that the geodesic ball $B(p, \beta)$ is strongly convex.
 
 
 ____
 
-### Note
 
-It is to note that I started with zero knowledge on differential geometry, only a distant and misty calculus background. Everything I learned comes from the references cited below. I started with Do Carmo's book that is an absoute reference for quite every other reference you could find on the topic (I couldn't tell how many stackExchange pages I found related to it). However, I found it very hard to digest as a first book. If you ever wanna start learning differential and riemannian geometry by yourself, I would recommend you to start with WHYB maths videos on the topic [4], which I found to be a real golden nugget. Then, I would highly recommend to have a look at Jean Gallier's course [3] slide notes : they are so well written, very complete with a lot of examples. Those two reference are a good start before diving into more "*pure maths*" books like Boothby's [2] or Do Carmo's [1].
 
-## References
+# References
 
 [1] Manfredo Perdigao Do Carmo, "Riemannian Geometry" in *Mathematics: Theory & Applications*, Birkhauser 1992\
 [2] William M. Boothby, "An introduction to differentiable manifolds and riemannian geometry" in *Pure and applied Mathematics*, Nachdr, 1993\
