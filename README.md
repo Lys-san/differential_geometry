@@ -1,6 +1,6 @@
 ### Preliminary note
 
-It is to note that I started with zero knowledge on differential geometry, only a distant and misty calculus background. Everything I learned comes from the references cited below. I started with Do Carmo's book that is an absoute reference for quite every other reference you could find on the topic (I couldn't tell how many stackExchange pages I found related to it). However, I found it very hard to digest as a first book. If you ever wanna start learning differential and riemannian geometry by yourself, I would recommend you to start with WHYB maths videos on the topic [4], which I found to be a real golden nugget. It really helped me having an intuition of what are manifolds without actually abstracting the formal definition part. Then, I would highly recommend to have a look at Jean Gallier's course [3] slide notes : they are so well written, very complete with a lot of examples. The course is divided into many subsections which makes it very easy to skim through and pick anything you need. Those two reference are a good start before diving into more "*pure maths*" books like Boothby's [2] or Do Carmo's [1], and will likely make their reading easier.
+It is to note that I started with zero knowledge on differential geometry, only a distant and misty calculus background. Everything I learned comes from the references cited below. I started with Do Carmo's book which is an absolute reference for quite every other reference you could find on the topic (I couldn't tell how many stackExchange pages I found related to it). However to be fair, I found it very hard to digest as a first book. If you ever wanna start learning differential and riemannian geometry by yourself, I would recommend you to start with WHYB maths videos on the topic [4], which I found to be a real golden nugget. It really helped me having an intuition of what are manifolds without actually abstracting the formal definition part. Then, I would highly recommend to have a look at Jean Gallier's course [3] slide notes : they are so well written, very complete with a lot of examples. The course is divided into many subsections which makes it very easy to skim through and pick anything you need. Those two reference are a good start before diving into more "*pure maths*" books like Boothby's [2] or Do Carmo's [1], and will likely make their reading easier.
 
 ___
 
@@ -112,10 +112,16 @@ In other words, this means that there exists a specific "border" such that if an
 
 > **proof** : Let $p$ be the point from the lemma, and let W be its totally normal neighborhood. Let's suppose that all the geodesics on $W$ have velocity one, so we can restrict ourselves to the unit tangent bundle $T_1W$ which corresponds to the set of **all tangent vectors of $W$ with  velocity one** : 
 > $$T_1W = \{(q, v); q \in W, v \in T_pM, \lvert v\rvert = 1\}$$
-> Let $\gamma: I \times T_1W \rightarrow \mathcal{M}$ with $I = (-\epsilon, \epsilon)$ be the differentiable mapping such that $t \rightarrow \gamma(t, q, v)$ is the geodesic that at the instant $t = 0$ passes through $q$ with velocity $v$, $\lvert v \rvert = 1$. In other words, $\gamma$ maps back the vectors of $T_1W$ that starts at $q$ to $\mathcal{M}$.
-Define $u(t, q, v) = \exp_p^{-1}(\gamma(t, q, v))$ and 
-> $$F : I \times T_1W \rightarrow R, \; F(t, q, v) = \lvert u(t, q, v)\rvert^2$$
-> $F$ measures the square of the "distance" from $p$ to a point that is moving along the geodesic $\gamma$. It is clear that $u$ and $F$ are differentiable
+> Let $\gamma: I \times T_1W \rightarrow \mathcal{M}$ with $I = (-\epsilon, \epsilon)$ be the differentiable mapping such that $t \rightarrow \gamma(t, q, v)$ is the geodesic that at the instant $t = 0$ passes through $q$ with velocity $v$, $\lvert v \rvert = 1$. In other words, $\gamma$ maps back the vectors of $T_1W$ that starts at $q$ to $\mathcal{M}$, and thus correspond to not only one but a collection of geodesics.\
+Define $u(t, q, v) = \exp_p^{-1}(\gamma(t, q, v))$ ($u$ is a collection of vectors in the tangent space from the geodesics $\gamma$), and 
+> $$F : I \times T_1W \rightarrow R, \; F(t, q, v) = \lvert u(t, q, v)\rvert^2 $$
+> $F$ measures the square of the "distance" from $p$ to a point $q$ that is moving along the geodesic $\gamma$. It is clear that $u$ and $F$ are differentiable, and that
+> $$\frac{\partial F}{\partial t} = 2\langle\frac{\partial u}{\partial t}, u\rangle \quad (1)$$
+> $$\frac{\partial^2 F}{\partial t^2} = 2\langle\frac{\partial^2 u}{\partial t^2}, u\rangle + 2\left\lvert\frac{\partial u}{\partial t}\right\rvert^2 \quad (2)$$
+> Now, let $r > 0$ such that $\exp_pB(0, r) = B(p, r) \subset W$. In other words, we chose $r$ such that the geodesic ball centered in $p$ with radius $r$ is contained in the neighborhood $W$ of $p$.\
+If a geodesic $\gamma$ is tangent to the geodesic sphere $S(p, r)$ at $q = \gamma(0, q, v)$, then from the Gauss lemma the vector $u$ at $q$ corresponding to $\gamma$ is orthogonal to ??? and so :
+> $$\langle\frac{\partial u}{\partial t}(0, q, v), u(0, q, v)\rangle = 0$$
+> Injecting this into (1) we obtain $\frac{\partial F}{\partial t} = 0$, which mean that $(0, q, v)$ in a critical point for $F$. As a reminder, we want to prove that $q$ is the closest point from $\gamma$ to $p$, hence we want to prove that $(0, q, v)$ is a minimum point.
 
 > **proposition** : For any $p \in M$ there exists a $\beta > 0$ such that the geodesic ball $B(p, \beta)$ is strongly convex.
 
