@@ -56,13 +56,13 @@ Nice properties of **shortes arcs** on convex surfaces* (cf p. 46-47):
 - Two shortest arcs can overlap on a whole segment, so that one of these shortest arcs is a part of the other (**case D**) OR so that one endpoint of their common segment (or the point that is the endpoint of one of these arcs and the other endpoint of this segment) is the endpoint of the other shortest arc (case E) (likewise two overlapping arcs of great circle).
 <img src="two_shortest_arcs_cases.png" alt="drawing" width="500" style="display: block; margin: 0 auto"/>
 - The five cases detailed above are the only possible arrangements for two shortest arcs.
-- The limit of shortest arc is a shortest arc, i.e. is shortest arcs converge to some curve, this curve is also a shortest arc.
+- The limit of shortest arc is a shortest arc, i.e. is shortest arcs converge to some curve, this curve is also a shortest arc (\*).
 
 ---
 
 
 *a **convex surface** is any subset of the boundary of a convex body i.e. a closed set $S$ on which each point can be joinded by a segment contained in $S$ (cf. p.3)\
-**a **complete convex surface** is the whole boundary of a convex body.
+**a **complete convex surface** is the whole boundary of a convex body.*
 
 ---
 
@@ -102,8 +102,32 @@ But still, all  those surfaces are non smooth.
 
 If two shortest arcs AB and AC coincide on some segment AD, on of them is included in the other. 
 
+-> *I think there is a mistake on the exemple presented on page 71: the angle that OA makes with OB and OC shall be equal to $\frac{2\pi}{3} to create overlapping shortest paths (having them equal to $\pi$ seems impossible to me).*
+
 -> Two different shortest arcs emanating from the same point can overlap on no segment.
 
+// illustration of the cone here
+
+Let $\mathcal{C}$ be a cone with complete angle $> 2\pi$. We denote by $O$ its vertex. We set three points $A$, $B$ and $C$ equidistant from $O$ and from each others. More precisely:
+- $d(A, O) = d(B, O) = d(C, O) = r$
+- $d(A, B) = d(B, c) = d(C, A)$
+
+On one hand, first possible paths joining $AB$ and $AC$ are the polygonal lines $AOC$ and $AOB$, of length $2r$.
+
+Now on the other hand, let $O'$ be the projection of $O$ on the plane $ABC$, and let $r' = d(A, O') = d(B, O') = d(C, O')$. Thus, the paths joining $AB$ and $AC$ *along* the cone have length $\frac{2\pi}{3}r'$.
+
+If $r' ... r$ then the first paths are shortest paths, and happen to be overlapping on the segment $AO$. 
 
 
-# Ch. 2 pt 4
+In fact, the nonoverlapping condition does **not** apply to cones with complete angle $> 2\pi$, which means that this holds for every polyhedral metric of positive curvature. 
+
+
+**proof of (\*)** : 
+
+
+
+# Ch. 2 pt 4 : convex neighborhood
+
+A set of points $G$ in an intrinsic metric manifold is called **convex** if there is a shortest arc of every two points of $G$ lying in $G$.
+
+> theorem : If the nonverlapping conditoin for shortest arcs holds in an intrinsic metric manifold, then each point of this manidolf has an arbitrary small neighborhood which is a convex polygon homeomorohic to a disk. 
